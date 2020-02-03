@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sari.demo.repository.TeamRepository">
+	<select id="findLGAll" resultType="com.sari.demo.model.LG">
+		select * from LG;
+	</select>
+
+
+	<select id="LGAll" resultType="com.sari.demo.model.LG">
+		select *
+		from LG as l
+		join Player as p
+		on p.pTeamId = l.id
+		where l.id = 2;
+	</select>
+
+
+
+</mapper>
